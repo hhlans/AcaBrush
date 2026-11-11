@@ -21,7 +21,11 @@ JSON 的 `index` 是新顺序，`source_index` 保留原图位置；派生库的
 
 `#13A4BD → #96C2D6 → #C5AFD1 → #EAAEBC → #D87F98 → #B9719E`
 
-调用连续色图时，全部 6 个锚点等距参与插值，形成从蓝侧经过浅蓝、紫粉过渡到粉侧的连续色带，不是只在两个端点之间插值。差值热力图应统一数值范围，可把 0 放在中间。`reference12_warm` 提供 4 色暖色分类库；`reference12_warm_heat` 提供浅黄→杏橙→珊瑚橙→玫瑰粉的暖色渐变。
+热力图保留来源色相，按各锚点25%–32%的比例与白色混合提亮，去除灰调，保持清新浅蓝粉感；来源色值保留在 JSON 的 `source_hex` 中，标准分类色卡不变。实际锚点为：
+
+`#5FC1D2 → #B8D6E3 → #D8C9E0 → #EFC2CD → #E3A3B5 → #CF9EBD`
+
+调用连续色图时，全部 6 个柔和锚点等距参与插值，形成从蓝侧经过浅蓝、紫粉过渡到粉侧的连续色带，不是只在两个端点之间插值。差值热力图应统一数值范围，可把 0 放在中间。`reference12_warm` 提供 4 色暖色分类库；`reference12_warm_heat` 提供浅黄→杏橙→珊瑚橙→玫瑰粉的暖色渐变。
 
 ```python
 from AcaBrush.ABs1.abs1.api import plot_points, plot_pointline, plot_heatmap, get_cmap
@@ -46,4 +50,4 @@ python AcaBrush/ABsCol/preview.py reference12
 python AcaBrush/ABsCol/preview.py reference12_heat
 ```
 
-完整 12 组示例为 `ABs1/Figure/showcase_reference12.pdf`，连续蓝粉融合色带为 `ABs1/Figure/showcase_bluepink_gradient.pdf`。色卡保存至 `ABsCol/Figure/`。仅输出 PDF 图像，保留模拟源数据、色库索引和运行检查日志。
+完整 12 组示例为 `ABs1/Figure/showcase_reference12.pdf`，蓝粉六锚点色卡见 `ABsCol/Figure/reference12_heat.pdf`。色卡保存至 `ABsCol/Figure/`。仅输出 PDF 图像，保留模拟源数据、色库索引和运行检查日志。

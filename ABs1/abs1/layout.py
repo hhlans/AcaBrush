@@ -96,6 +96,8 @@ def create_figure(nrows=1, ncols=1, *, panel_size=BASE_PANEL_SIZE):
 
 def get_layout_spec(fig):
     """Return allocated physical slots and final plot rectangles, in inches."""
+    if hasattr(fig, '_abs_measured_layout'):
+        return copy.deepcopy(fig._abs_measured_layout)
     if not hasattr(fig, '_abs_unit_layout'):
         raise ValueError("Figure was not created with the ABs unit-layout API")
     result = copy.deepcopy(fig._abs_unit_layout)
@@ -192,12 +194,21 @@ def finalize_layout(fig, axes, *, style=DEFAULT, label_pad_pt=5, w_pad=1.1, top=
         raise ValueError("Split figures with more than 26 labelled panels")
     labels = []
     if len(axes) > 1:
-        for letter, ax in zip(string.ascii_lowercase, axes):
+        anchors = []
+        for ax in axes:
             full = ax.get_tightbbox(renderer).transformed(fig.transFigure.inverted())
-            top = ax.get_position().y1 + label_pad_pt / (72*fig.get_figheight())
-            labels.append(fig.text(full.x0, top, letter, ha="left", va="bottom",
-                                   fontsize=style.label, fontweight="bold",
-                                   gid="abs1-panel-label"))
+            grid = ax.get_subplotspec()
+            row, col = grid.rowspan.start, grid.colspan.start
+            anchors.append((row, col, full.x0,
+                            ax.get_position().y1 + label_pad_pt/(72*fig.get_figheight())))
+        column_x = {col: min(x for row,c,x,y in anchors if c == col)
+                    for _,col,_,_ in anchors}
+        row_y = {row: max(y for r,col,x,y in anchors if r == row)
+                 for row,_,_,_ in anchors}
+        for letter, (row,col,_,_) in zip(string.ascii_lowercase, anchors):
+            labels.append(fig.text(column_x[col], row_y[row], letter,
+                                   ha="left", va="baseline", fontsize=style.label,
+                                   fontweight="bold", gid="abs1-panel-label"))
     fig.canvas.draw()
     for label in labels:
         box = label.get_window_extent(fig.canvas.get_renderer())

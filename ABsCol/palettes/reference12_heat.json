@@ -1,6 +1,6 @@
 {
   "name": "reference12_heat",
-  "description": "蓝粉多锚点融合：青蓝→雾蓝→淡紫→浅粉→玫瑰粉→梅紫",
+  "description": "清新浅蓝粉六锚点融合：保留原色相，向白色提亮，去除灰调",
   "kind": "diverging",
   "source": {
     "palette": "reference12",
@@ -17,81 +17,98 @@
     {
       "index": 0,
       "name": "青蓝",
-      "hex": "#13A4BD",
+      "hex": "#5FC1D2",
       "rgb": [
-        19,
-        164,
-        189
+        95,
+        193,
+        210
       ],
       "source_index": 1,
       "family": "blue",
-      "parent_index": 1
+      "parent_index": 1,
+      "source_hex": "#13A4BD"
     },
     {
       "index": 1,
       "name": "雾蓝",
-      "hex": "#96C2D6",
+      "hex": "#B8D6E3",
       "rgb": [
-        150,
-        194,
-        214
+        184,
+        214,
+        227
       ],
       "source_index": 0,
       "family": "blue",
-      "parent_index": 0
+      "parent_index": 0,
+      "source_hex": "#96C2D6"
     },
     {
       "index": 2,
       "name": "淡紫",
-      "hex": "#C5AFD1",
+      "hex": "#D8C9E0",
       "rgb": [
-        197,
-        175,
-        209
+        216,
+        201,
+        224
       ],
       "source_index": 10,
       "family": "pink-purple",
-      "parent_index": 10
+      "parent_index": 10,
+      "source_hex": "#C5AFD1"
     },
     {
       "index": 3,
       "name": "浅粉",
-      "hex": "#EAAEBC",
+      "hex": "#EFC2CD",
       "rgb": [
-        234,
-        174,
-        188
+        239,
+        194,
+        205
       ],
       "source_index": 11,
       "family": "pink-purple",
-      "parent_index": 8
+      "parent_index": 8,
+      "source_hex": "#EAAEBC"
     },
     {
       "index": 4,
       "name": "玫瑰粉",
-      "hex": "#D87F98",
+      "hex": "#E3A3B5",
       "rgb": [
-        216,
-        127,
-        152
+        227,
+        163,
+        181
       ],
       "source_index": 8,
       "family": "pink-purple",
-      "parent_index": 9
+      "parent_index": 9,
+      "source_hex": "#D87F98"
     },
     {
       "index": 5,
       "name": "梅紫",
-      "hex": "#B9719E",
+      "hex": "#CF9EBD",
       "rgb": [
-        185,
-        113,
-        158
+        207,
+        158,
+        189
       ],
       "source_index": 9,
       "family": "pink-purple",
-      "parent_index": 11
+      "parent_index": 11,
+      "source_hex": "#B9719E"
     }
   ],
-  "interpolation": "All six anchors, equally spaced from 0 to 1; continuous RGB interpolation"
+  "interpolation": "All six anchors, equally spaced from 0 to 1; continuous RGB interpolation",
+  "adjustment": {
+    "method": "blend original reference hues with white; no gray desaturation",
+    "white_mix_by_anchor": [
+      0.32,
+      0.32,
+      0.32,
+      0.25,
+      0.28,
+      0.32
+    ]
+  }
 }

@@ -124,9 +124,12 @@ def plot_bar(ax, x, height, *, config=None, style=DEFAULT, **kwargs):
     return ax
 
 def plot_heatmap(ax, x, y, values, *, config=None, style=DEFAULT, **kwargs):
-    """Use a derived warm ramp by default; continuous=False selects discrete colors."""
+    """Use the derived blue-pink ramp by default; continuous=False selects discrete colors."""
     with _chart_options(ax, "heatmap", config, kwargs) as options:
         _project_plots().plot_heatmap(ax, x, y, values, **options)
+    for spine in ax.spines.values():
+        spine.set_visible(True)
+        spine.set_linewidth(style.axes)
     cb = ax.collections[-1].colorbar
     if cb is not None:
         cb.ax.tick_params(labelsize=style.font, width=style.tick)

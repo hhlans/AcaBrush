@@ -6,16 +6,16 @@ from .palette import get_palette
 
 @dataclass(frozen=True)
 class Style:
-    font: float = 16
+    font: float = 14
     label: float = 22
-    line: float = 1.2
-    axes: float = 1.2
-    tick: float = 1.2
+    line: float = 0.9
+    axes: float = 0.9
+    tick: float = 0.9
     tick_length: float = 5
     marker: float = 4
-    marker_edge: float = 1.2
+    marker_edge: float = 0.9
     grid: float = 0.6
-    reference: float = 1.2
+    reference: float = 0.9
 
 DEFAULT = Style()
 COLORS = get_palette("reference12")

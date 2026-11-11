@@ -124,7 +124,7 @@ def render_showcase(d,base,log,qa_dir):
                      handlelength=1,borderpad=.2,columnspacing=1)
         e_heat.set(xlim=(0,24),ylim=(0,12),xticks=[0,12,24],
                    xlabel='Time (h)',ylabel='Group')
-        e_heat.set_yticks(np.arange(12)+.5,[str(i) for i in range(1,13)])
+        e_heat.set_yticks([.5,3.5,7.5,11.5],['1','4','8','12'])
         f.set(xlim=(.4,12.6),ylim=(0,1),xticks=np.arange(1,13),yticks=[0,.5,1],
               xlabel='Group',ylabel='Response')
         divider=make_axes_locatable(e_heat)
@@ -137,7 +137,7 @@ def render_showcase(d,base,log,qa_dir):
                         linewidth=brush.DEFAULT.line,markersize=brush.DEFAULT.marker,label=f'G{i+1:02}')
                  for i,color in enumerate(colors)]
         panels['legend'].legend(handles=handles,loc='center',
-                   ncol=3,frameon=False,columnspacing=1.8,handlelength=2,
+                   ncol=2,frameon=False,columnspacing=1.2,handlelength=2,
                    handletextpad=.5,labelspacing=.9)
         brush.finalize_layout(fig,axes)
         layout=brush.get_layout_spec(fig)
@@ -200,7 +200,7 @@ def main():
         palette=list(brush.get_palette('reference12')),heat_anchors=list(brush.get_palette('reference12_heat')),
         canvas_inches=layout['canvas_inches'],
         panel_units={name:[p['width_units'],p['height_units']] for name,p in layout['panels'].items()},
-        font_pt=16,line_width_pt=1.2,
+        font_pt=brush.DEFAULT.font,line_width_pt=brush.DEFAULT.line,
         panel_roles=['trajectories','feature clusters','composition','three-condition response',
                      'response deviation matrix','distributions with all observations'],
         qa_enabled=bool(args.qa_dir)),indent=2))

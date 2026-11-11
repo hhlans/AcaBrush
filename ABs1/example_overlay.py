@@ -77,7 +77,7 @@ def main():
             if result.returncode:
                 raise RuntimeError(f'{script} failed; see {log}')
     (log/'run.json').write_text(json.dumps(dict(synthetic=True,seed=seed,
-        size_inches=[3,2.5],font_pt=14,line_width_pt=1.2,axes_count=1,
+        size_inches=[3,2.5],font_pt=14,line_width_pt=0.9,axes_count=1,
         n_observations=len(x_obs),n_fit=len(x_fit),n_reference=len(x_ref),
         band='Illustrative +/-0.025, not a confidence interval',
         qa_enabled=bool(args.qa_dir)),indent=2))
