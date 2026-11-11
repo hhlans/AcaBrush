@@ -1,0 +1,10 @@
+{
+  "widths": 0.7,
+  "alpha": 0.4,
+  "showmedians": true,
+  "showextrema": false,
+  "points": 100,
+  "bw_method": "scott",
+  "palette": "reference12",
+  "color_index": "auto"
+}

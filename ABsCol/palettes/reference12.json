@@ -1,0 +1,197 @@
+{
+  "name": "reference12",
+  "description": "标准十二色：按蓝、绿、暖、粉紫分批排序",
+  "source": {
+    "type": "reference_image",
+    "method": "Printed HEX labels, not JPEG pixel sampling",
+    "rows": 2,
+    "columns": 6,
+    "ordering": "Color-family batches; source_index preserves the original reference-image position"
+  },
+  "colors": [
+    {
+      "index": 0,
+      "name": "雾蓝",
+      "hex": "#96C2D6",
+      "rgb": [
+        150,
+        194,
+        214
+      ],
+      "source_index": 0,
+      "family": "blue"
+    },
+    {
+      "index": 1,
+      "name": "青蓝",
+      "hex": "#13A4BD",
+      "rgb": [
+        19,
+        164,
+        189
+      ],
+      "source_index": 1,
+      "family": "blue"
+    },
+    {
+      "index": 2,
+      "name": "薄荷绿",
+      "hex": "#81BFAD",
+      "rgb": [
+        129,
+        191,
+        173
+      ],
+      "source_index": 2,
+      "family": "green"
+    },
+    {
+      "index": 3,
+      "name": "深绿",
+      "hex": "#3E8043",
+      "rgb": [
+        62,
+        128,
+        67
+      ],
+      "source_index": 7,
+      "family": "green"
+    },
+    {
+      "index": 4,
+      "name": "浅黄",
+      "hex": "#E6DD96",
+      "rgb": [
+        230,
+        221,
+        150
+      ],
+      "source_index": 4,
+      "family": "warm"
+    },
+    {
+      "index": 5,
+      "name": "杏橙",
+      "hex": "#F4BA6E",
+      "rgb": [
+        244,
+        186,
+        110
+      ],
+      "source_index": 6,
+      "family": "warm"
+    },
+    {
+      "index": 6,
+      "name": "珊瑚橙",
+      "hex": "#E2977C",
+      "rgb": [
+        226,
+        151,
+        124
+      ],
+      "source_index": 3,
+      "family": "warm"
+    },
+    {
+      "index": 7,
+      "name": "暖棕",
+      "hex": "#C7A48E",
+      "rgb": [
+        199,
+        164,
+        142
+      ],
+      "source_index": 5,
+      "family": "warm"
+    },
+    {
+      "index": 8,
+      "name": "浅粉",
+      "hex": "#EAAEBC",
+      "rgb": [
+        234,
+        174,
+        188
+      ],
+      "source_index": 11,
+      "family": "pink-purple"
+    },
+    {
+      "index": 9,
+      "name": "玫瑰粉",
+      "hex": "#D87F98",
+      "rgb": [
+        216,
+        127,
+        152
+      ],
+      "source_index": 8,
+      "family": "pink-purple"
+    },
+    {
+      "index": 10,
+      "name": "淡紫",
+      "hex": "#C5AFD1",
+      "rgb": [
+        197,
+        175,
+        209
+      ],
+      "source_index": 10,
+      "family": "pink-purple"
+    },
+    {
+      "index": 11,
+      "name": "梅紫",
+      "hex": "#B9719E",
+      "rgb": [
+        185,
+        113,
+        158
+      ],
+      "source_index": 9,
+      "family": "pink-purple"
+    }
+  ],
+  "kind": "categorical",
+  "sequential_palette": "reference12_heat",
+  "families": [
+    {
+      "name": "blue",
+      "label": "蓝色系",
+      "colors": [
+        "#96C2D6",
+        "#13A4BD"
+      ]
+    },
+    {
+      "name": "green",
+      "label": "绿色系",
+      "colors": [
+        "#81BFAD",
+        "#3E8043"
+      ]
+    },
+    {
+      "name": "warm",
+      "label": "暖色系",
+      "colors": [
+        "#E6DD96",
+        "#F4BA6E",
+        "#E2977C",
+        "#C7A48E"
+      ]
+    },
+    {
+      "name": "pink-purple",
+      "label": "粉紫色系",
+      "colors": [
+        "#EAAEBC",
+        "#D87F98",
+        "#C5AFD1",
+        "#B9719E"
+      ]
+    }
+  ]
+}

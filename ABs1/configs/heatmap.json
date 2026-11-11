@@ -1,0 +1,7 @@
+{
+  "shading": "auto",
+  "rasterized": true,
+  "colorbar": false,
+  "palette": "reference12_heat",
+  "continuous": true
+}

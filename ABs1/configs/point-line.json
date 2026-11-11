@@ -1,0 +1,22 @@
+{
+  "mode": "pointline",
+  "marker": "auto",
+  "alpha": 1.0,
+  "ls": "-",
+  "markers": [
+    "s",
+    "^",
+    "D",
+    "v",
+    "P",
+    "X",
+    "<",
+    ">",
+    "h",
+    "*",
+    "d",
+    "o"
+  ],
+  "palette": "reference12",
+  "color_index": "auto"
+}

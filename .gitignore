@@ -1,0 +1,19 @@
+# Local runtime and editor files
+.DS_Store
+__pycache__/
+*.py[cod]
+**/Log/
+.idea/
+.vscode/
+~$*
+*.docx
+*.tmp
+*.log
+# Local environment and build products
+.env
+.env.*
+.venv/
+venv/
+*.egg-info/
+build/
+dist/

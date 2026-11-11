@@ -1,0 +1,41 @@
+{
+  "base_inches": [
+    3,
+    2.8
+  ],
+  "mosaic": [
+    [
+      "a",
+      "a",
+      "b",
+      "c"
+    ],
+    [
+      "a",
+      "a",
+      "d",
+      "d"
+    ],
+    [
+      "e",
+      "e",
+      "f",
+      "f"
+    ],
+    [
+      "e",
+      "e",
+      "legend",
+      "legend"
+    ]
+  ],
+  "roles": {
+    "a": "12 trajectories",
+    "b": "12 feature clusters",
+    "c": "12-layer composition",
+    "d": "36 grouped bars",
+    "e": "12-row response matrix",
+    "f": "12 distributions",
+    "legend": "shared group legend"
+  }
+}

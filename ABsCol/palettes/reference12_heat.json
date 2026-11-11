@@ -1,0 +1,97 @@
+{
+  "name": "reference12_heat",
+  "description": "蓝粉多锚点融合：青蓝→雾蓝→淡紫→浅粉→玫瑰粉→梅紫",
+  "kind": "diverging",
+  "source": {
+    "palette": "reference12",
+    "indices": [
+      1,
+      0,
+      10,
+      8,
+      9,
+      11
+    ]
+  },
+  "colors": [
+    {
+      "index": 0,
+      "name": "青蓝",
+      "hex": "#13A4BD",
+      "rgb": [
+        19,
+        164,
+        189
+      ],
+      "source_index": 1,
+      "family": "blue",
+      "parent_index": 1
+    },
+    {
+      "index": 1,
+      "name": "雾蓝",
+      "hex": "#96C2D6",
+      "rgb": [
+        150,
+        194,
+        214
+      ],
+      "source_index": 0,
+      "family": "blue",
+      "parent_index": 0
+    },
+    {
+      "index": 2,
+      "name": "淡紫",
+      "hex": "#C5AFD1",
+      "rgb": [
+        197,
+        175,
+        209
+      ],
+      "source_index": 10,
+      "family": "pink-purple",
+      "parent_index": 10
+    },
+    {
+      "index": 3,
+      "name": "浅粉",
+      "hex": "#EAAEBC",
+      "rgb": [
+        234,
+        174,
+        188
+      ],
+      "source_index": 11,
+      "family": "pink-purple",
+      "parent_index": 8
+    },
+    {
+      "index": 4,
+      "name": "玫瑰粉",
+      "hex": "#D87F98",
+      "rgb": [
+        216,
+        127,
+        152
+      ],
+      "source_index": 8,
+      "family": "pink-purple",
+      "parent_index": 9
+    },
+    {
+      "index": 5,
+      "name": "梅紫",
+      "hex": "#B9719E",
+      "rgb": [
+        185,
+        113,
+        158
+      ],
+      "source_index": 9,
+      "family": "pink-purple",
+      "parent_index": 11
+    }
+  ],
+  "interpolation": "All six anchors, equally spaced from 0 to 1; continuous RGB interpolation"
+}
